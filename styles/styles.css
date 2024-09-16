@@ -35,15 +35,23 @@ body {
 }
 
 .navigation-link {
-  font-family: "PT Sans", sans-serif;
   line-height: 21px;
   font-weight: 700;
   font-size: 20px;
-  text-align: center;
   color: inherit;
   text-decoration: none;
 }
-
+.navigation-link-button {
+  width: 160px;
+  height: 36px;
+  padding: 8px 50px 8px 50px;
+  gap: 10px;
+  border-radius: 4px 0 0 0;
+  background-color: #756157;
+  text-decoration: none;
+  color: #ffffff;
+  text-transform: uppercase;
+}
 .main-index {
   color: #000000;
   background-color: #ffffff;
@@ -53,7 +61,7 @@ body {
   background-image: url("../images/main/index-background.jpg");
   background-repeat: no-repeat;
   background-size: 100% auto, cover;
-  background-color: #333333;
+  background-color: #ffffff;
   margin-bottom: 69px;
 }
 
@@ -103,6 +111,9 @@ body {
 }
 
 .advantages-dark-block {
+  background: #83b3d333;
+}
+.advantages-white-block {
   background-color: #83b3d31f;
 }
 
@@ -129,7 +140,9 @@ body {
   text-align: center;
   height: 406px;
 }
-
+.hotel-search-link-button {
+  text-decoration: none;
+}
 .hotel-search-title {
   text-transform: uppercase;
   font-size: 30px;
@@ -163,7 +176,7 @@ body {
 }
 
 .subscribe {
-  background-image: url(../images/main/subscribe.jpg);
+  background-image: url("../images/main/subscribe.jpg");
   background-color: #333333;
   background-repeat: no-repeat;
   background-size: 100% auto, cover;
@@ -187,14 +200,38 @@ body {
   color: #ffffff;
   padding-top: 20px;
 }
-
+.subscribe-button {
+  background-color: #82b3d3;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 36px;
+  text-align: center;
+}
+.subscribe-email {
+  color: #000000;
+  font-size: 18px;
+  line-height: 24px;
+  background-color: #f2f2f2;
+}
 .subscribe-form {
   padding-top: 54px;
 }
+.footer-link {
+  text-decoration: none;
+}
 
+.contacts-phone {
+  color: inherit;
+  text-decoration: none;
+  text-align: center;
+  font-size: 40px;
+  line-height: 40px;
+  text-transform: uppercase;
+}
 .filter {
-  background-image: url(../images/catalog/filtr-backround.jpg);
-  background-color: #333333;
+  background-image: url("../images/catalog/filtr-backround.jpg");
+  background-color: #ffffff;
   background-repeat: no-repeat;
   background-size: 100% auto, cover;
   text-align: center;
@@ -275,6 +312,7 @@ body {
 }
 
 .catalog-link-detailed {
+  text-decoration: none;
   text-transform: uppercase;
   background: #756157;
   width: 140px;
@@ -294,6 +332,7 @@ body {
 }
 
 .catalog-link-favourites {
+  text-decoration: none;
   text-transform: uppercase;
   background: #82b3d3;
   width: 140px;
