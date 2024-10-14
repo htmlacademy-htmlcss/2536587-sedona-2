@@ -16,7 +16,7 @@
               src="images/main/header-logo.svg"
               alt="Логотип Седоны"
               width="140"
-              height="71"
+              height="70"
             />
           </a>
           <ul class="navigation-list">
@@ -27,26 +27,26 @@
               <a class="navigation-link" href="#">О седоне</a>
             </li>
             <li class="navigation-item">
-              <a class="navigation-link" href="catalog.html">Гостиницы</a>
-            </li>
-          </ul>
-          <ul class="navigation-list search-menu">
-            <li class="search-menu-item">
-              <a class="navigation-link" href="#">
-                <span class="visually-hidden">Поиск</span>
-                <span>1</span></a
+              <a
+                class="navigation-link navigation-link-current"
+                href="catalog.html"
+                >Гостиницы</a
               >
             </li>
-            <li class="search-menu-item">
-              <a class="navigation-link" href="#"
+          </ul>
+          <ul class="navigation-list navigation-user">
+            <li class="search-menu-item navigation-item">
+              <a class="navigation-link navigation-link-search" href="#">
+                <span class="visually-hidden">Поиск</span></a
+              >
+            </li>
+            <li class="search-menu-item navigation-item">
+              <a class="navigation-link navigation-link-favorites" href="#"
                 ><span class="visually-hidden">Избранное</span>
-                <span>2</span>
               </a>
             </li>
             <li class="search-menu-item">
-              <a class="search-menu-button" href="#"
-                ><span>Хочу cюда!</span>
-              </a>
+              <a class="button search-menu-button" href="#">Хочу cюда! </a>
             </li>
           </ul>
         </nav>
@@ -58,7 +58,22 @@
             <ul class="breadcrumbs">
               <li class="breadcrumbs-item">
                 <a class="breadcrumbs-link" href="index.html">
-                  <span class="#">Главная</span>
+                  <svg
+                    class="breadcrumbs-icon"
+                    aria-hidden="true"
+                    focusable="false"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="13"
+                    height="13"
+                    fill="none"
+                    viewBox="0 0 13 13"
+                  >
+                    <path
+                      fill="#fff"
+                      d="m6.5.5-6 5.8v6.2h12V6.3L6.5.5Zm5 11h-10V6.7l5-4.8 5 4.8v4.8Z"
+                    />
+                    <path fill="#fff" d="M4.5 10.5h1V8h2v2.5h1V7h-4v3.5Z" />
+                  </svg>
                 </a>
               </li>
               <li class="breadcrumbs-item">
@@ -73,7 +88,7 @@
             method="get"
           >
             <fieldset class="catalog-filter-group-inf">
-              <legend class="catalog-filter-title">Инфрастуктура</legend>
+              <legend class="catalog-filter-title">Инфрастуктура:</legend>
               <ul class="catalog-filter-list">
                 <li class="catalog-filter-item">
                   <label class="control">
@@ -106,7 +121,7 @@
               </ul>
             </fieldset>
             <fieldset class="catalog-filter-group">
-              <legend class="catalog-filter-title">Тип жилья</legend>
+              <legend class="catalog-filter-title">Тип жилья:</legend>
               <ul class="catalog-filter-list">
                 <li class="catalog-filter-item">
                   <label class="control">
@@ -146,26 +161,47 @@
             </fieldset>
             <fieldset class="catalog-filter-group-cost">
               <legend class="catalog-filter-title">Стоимость, ₽:</legend>
-              <label class="inherit-text" for="catalog-filter-price"></label>
-              <input
-                class="inherit-text"
-                type="number"
-                name="price"
-                value="0"
-                id="catalog-filter-price"
-              />
-              <label for="catalog-filter-price-befor"></label>
-              <input
-                class="inherit-text"
-                type="number"
-                name="price"
-                value="9000"
-                id="catalog-filter-price-befor"
-              />
+              <ul class="catalog-cost-list">
+                <li class="catalog-cost-item">
+                  <label class="price-label">
+                    <span class="price-text"> от</span>
+                    <input
+                      class="cost-item"
+                      type="number"
+                      min="0"
+                      name="min-price"
+                      value="0"
+                      id="catalog-filter-price"
+                    />
+                  </label>
+                </li>
+                <li class="catalog-cost-item">
+                  <label class="price-label">
+                    <span class="price-text"> до</span>
+                    <input
+                      class="cost-item"
+                      type="number"
+                      name="max-price"
+                      max="10000"
+                      value="9000"
+                    />
+                  </label>
+                </li>
+              </ul>
             </fieldset>
             <fieldset class="catalog-filter-group-button">
-              <button class="button-submit" type="submit">Применить</button>
-              <button class="button-reset" type="reset">Сбросить</button>
+              <button
+                class="button button-submit catalog-filter-button"
+                type="submit"
+              >
+                Применить
+              </button>
+              <button
+                class="button button-reset catalog-filter-button"
+                type="reset"
+              >
+                Сбросить
+              </button>
             </fieldset>
           </form>
         </section>
@@ -182,7 +218,10 @@
               <option value="expensive">Сначала дорогие</option>
             </select>
             <div class="catalog-hotels-buttons">
-              <a href="#" class="catalog-hotels-button">
+              <a
+                href="#"
+                class="catalog-hotels-button catalog-hotels-button-active"
+              >
                 <span class="visually-hidden">Показать карточки</span>
               </a>
               <a href="#" class="catalog-hotels-button">
@@ -204,7 +243,9 @@
                   height="212px"
                 />
               </a>
-              <h3 class="catalog-card-title">Amara Resort & Spa</h3>
+              <a class="catalog-card-title-link" href="#">
+                <h3 class="catalog-card-title">Amara Resort & Spa</h3>
+              </a>
               <p class="catalog-card-descriprion">Гостиница</p>
               <p class="catalog-card-price">
                 От
@@ -213,8 +254,8 @@
                 >
                 ₽
               </p>
-              <a class="product-link-detailed" href="#">Подробнее</a>
-              <button class="product-link-favourites" type="button">
+              <a class="button product-link-detailed" href="#">Подробнее</a>
+              <button class="button product-link-favourites" type="button">
                 в Избранное
               </button>
               <div class="stars four-stars">
@@ -232,7 +273,9 @@
                   height="212px"
                 />
               </a>
-              <h3 class="catalog-card-title">Villas at Poco Diablo</h3>
+              <a class="catalog-card-title-link" href="#">
+                <h3 class="catalog-card-title">Villas at Poco Diablo</h3>
+              </a>
               <p class="catalog-card-descriprion">Гостиница</p>
               <p class="catalog-card-price">
                 От
@@ -241,8 +284,8 @@
                 >
                 ₽
               </p>
-              <a class="product-link-detailed" href="#">Подробнее</a>
-              <button class="product-link-favourites" type="button">
+              <a class="button product-link-detailed" href="#">Подробнее</a>
+              <button class="button product-link-favourites" type="button">
                 в Избранное
               </button>
               <div class="stars four-stars">
@@ -260,7 +303,9 @@
                   height="212px"
                 />
               </a>
-              <h3 class="catalog-card-title">Desert Quail Inn</h3>
+              <a class="catalog-card-title-link" href="#">
+                <h3 class="catalog-card-title">Desert Quail Inn</h3>
+              </a>
               <p class="catalog-card-descriprion">Гостиница</p>
               <p class="catalog-card-price">
                 От
@@ -269,8 +314,8 @@
                 >
                 ₽
               </p>
-              <a class="product-link-detailed" href="#">Подробнее</a>
-              <button class="product-link-favourites" type="button">
+              <a class="button product-link-detailed" href="#">Подробнее</a>
+              <button class="button product-link-favourites" type="button">
                 в Избранное
               </button>
               <div class="stars three-stars">
@@ -288,7 +333,9 @@
                   height="212px"
                 />
               </a>
-              <h3 class="catalog-card-title">GreenTree Inn</h3>
+              <a class="catalog-card-title-link" href="#">
+                <h3 class="catalog-card-title">GreenTree Inn</h3>
+              </a>
               <p class="catalog-card-descriprion">Гостиница</p>
               <p class="catalog-card-price">
                 От
@@ -297,9 +344,9 @@
                 >
                 ₽
               </p>
-              <a class="product-link-detailed" href="#">Подробнее</a>
+              <a class="button product-link-detailed" href="#">Подробнее</a>
               <button
-                class="product-link-favourites"
+                class="button product-link-favourites"
                 type="button"
                 aria-pressed="true"
               >
@@ -313,7 +360,7 @@
           </ul>
           <ul class="pagination-list">
             <li class="pagination-item">
-              <a class="pagination-link" href="#">1</a>
+              <a class="pagination-link pagination-current" href="#">1</a>
             </li>
             <li class="pagination-item">
               <a class="pagination-link" href="#">2</a>
@@ -359,21 +406,63 @@
         <h2 class="visually-hidden">Контакты</h2>
         <ul class="social-list">
           <li class="social-item">
-            <a class="social-link" href="https://vk.com/htmlacademy">
+            <a class="footer-social-link" href="https://vk.com/htmlacademy">
               <span class="visually-hidden">Вконтакте</span>
+              <svg
+                class="footer-social-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+                focusable="false"
+                width="25"
+                height="15"
+                fill="none"
+              >
+                <path
+                  d="M24.12 1.8c.16-.54 0-.94-.8-.94H20.7c-.67 0-.98.34-1.15.73 0 0-1.33 3.2-3.22 5.27-.61.6-.9.8-1.23.8-.16 0-.41-.2-.41-.75v-5.1c0-.66-.19-.95-.74-.95H9.82c-.42 0-.67.3-.67.59 0 .62.95.76 1.04 2.51v3.8c0 .83-.15.98-.48.98-.9 0-3.06-3.2-4.34-6.88-.25-.72-.5-1-1.18-1H1.57c-.75 0-.9.34-.9.73 0 .68.89 4.07 4.14 8.55 2.17 3.06 5.23 4.72 8 4.72 1.68 0 1.88-.37 1.88-1v-2.32c0-.74.16-.88.7-.88.38 0 1.05.19 2.6 1.66 1.79 1.75 2.08 2.54 3.08 2.54h2.63c.75 0 1.12-.37.9-1.1-.23-.72-1.08-1.77-2.2-3.02-.62-.71-1.54-1.48-1.82-1.86-.39-.5-.28-.71 0-1.15 0 0 3.2-4.42 3.54-5.93Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
             </a>
           </li>
           <li class="social-item">
-            <a class="social-link" href="https://t.me/htmlacademy">
+            <a class="footer-social-link" href="https://t.me/htmlacademy">
               <span class="visually-hidden">Телеграм</span>
+              <svg
+                class="footer-social-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+                focusable="false"
+                width="18"
+                height="16"
+                fill="none"
+                viewBox="0 0 18 16"
+              >
+                <path
+                  d="M16.79.96.84 7.1c-1.09.44-1.08 1.05-.2 1.32l4.1 1.28 9.47-5.98c.44-.27.85-.13.52.17l-7.68 6.93-.28 4.22c.41 0 .6-.2.83-.41l1.99-1.94 4.13 3.06c.77.42 1.31.2 1.5-.71l2.72-12.8c.28-1.1-.43-1.61-1.16-1.28Z"
+                />
+              </svg>
             </a>
           </li>
           <li class="social-item">
             <a
-              class="social-link"
+              class="footer-social-link"
               href="https://www.youtube.com/user/htmlacademyru"
             >
               <span class="visually-hidden">Ютуб</span>
+              <svg
+                class="footer-social-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+                focusable="false"
+                width="23"
+                height="18"
+                fill="none"
+                viewBox="0 0 23 18"
+              >
+                <path
+                  d="M18.94.36H3.51C1.65.36.33 1.95.33 3.76v10.09c0 1.91 1.32 3.5 3.18 3.5h15.65c1.64 0 3.17-1.59 3.17-3.4V3.76c-.22-1.8-1.53-3.4-3.39-3.4ZM7.99 12.89V4.82l7.34 4.04-7.34 4.03Z"
+                />
+              </svg>
             </a>
           </li>
         </ul>
