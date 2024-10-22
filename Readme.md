@@ -1,8 +1,8 @@
 # Личный проект «Седона»
 
 * Студент: [Тимур Сибгатов](https://up.htmlacademy.ru/htmlcss-individual/2/user/2536587).
-* Наставник: `Неизвестно`.
-
+* Наставник: [Андрей Грачев](https://htmlacademy.ru/profile/angra).
+* Мой проект: [Проект Седона](https://peso4ek-program.github.io/sedona-htmlacademy/).
 ---
 
 _Не удаляйте и не обращайте внимание на файлы:_<br>
